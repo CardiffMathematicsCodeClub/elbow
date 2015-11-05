@@ -1,4 +1,4 @@
-from elbow.games import Game
+from elbow.games import Game, GameRunner
 from random import randint
 
 class GuessMyNumber(Game):
@@ -9,3 +9,13 @@ class GuessMyNumber(Game):
     """
     answer = randint(1,100)
     prompt = "I am thinking of a number bewtween 1 and 100, what is it? "
+
+    def give_hint(self, answer):
+        """
+        This function gives feedback to the player saying if their answer was too
+        low or too high.
+        """
+        if answer < self.answer:
+            return "Your guess was too low"
+        else:
+            return "Your guess was too high."

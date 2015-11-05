@@ -1,1 +1,1 @@
-from games import Game
+from games import Game, GameRunner
