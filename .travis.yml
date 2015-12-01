@@ -1,6 +1,10 @@
-
 language: python
 python:
   - 2.7
 script:
   - python -m unittest discover
+notifications:
+    webhooks:
+        urls:
+            - https://webhooks.gitter.im/e/c277df3d3ff780959926
+
