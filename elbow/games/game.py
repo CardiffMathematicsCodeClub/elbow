@@ -43,7 +43,7 @@ class Game(object):
         if guess == str(self.answer):
             return "Congratulations you win!"
         else:
-            return "Incorrect"
+            return "Incorrect\n%s" % self.give_hint(guess)
 
     # "Private" methods - inheriting classes shouldn't touch these
 

@@ -15,7 +15,7 @@ class GuessMyNumber(Game):
         This function gives feedback to the player saying if their answer was too
         low or too high.
         """
-        if answer < self.answer:
+        if int(answer) < self.answer:
             return "Your guess was too low"
         else:
             return "Your guess was too high."
